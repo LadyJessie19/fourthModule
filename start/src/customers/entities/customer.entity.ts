@@ -1,4 +1,5 @@
-export class CreateCostumerDto {
+export class Customer {
+    id:number
     firstName:string
     lastName:string
     age:number
