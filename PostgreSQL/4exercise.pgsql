@@ -33,9 +33,9 @@ LEFT JOIN evaluation ON product_id = evaluation.product_id; */
 -- LEFT JOIN evaluation ON products.id = evaluation.product_id
 -- ORDER BY id;
 
--- SELECT * FROM evaluation;
+SELECT * FROM evaluation;
 
--- INSERT INTO evaluation (description, rating, product_id) VALUES ('mUITO bOM', 4, 2);
+INSERT INTO evaluation (description, rating, product_id) VALUES ('Uma droga', 1, 15);
 
 /* SELECT products.*, evaluation.*
 FROM products
@@ -66,8 +66,7 @@ LEFT JOIN evaluation ON products.id = evaluation.product_id;
 -- CREATE TABLE store(
 --     id SERIAL PRIMARY KEY, 
 --     name VARCHAR(64) NOT NULL, 
---     city VARCHAR(64), 
---     product_id INT REFERENCES products(id)
+--     city VARCHAR(64)
 -- );
 
 -- SELECT * FROM store;
@@ -75,12 +74,20 @@ LEFT JOIN evaluation ON products.id = evaluation.product_id;
 -- ALTER TABLE products
 -- ADD COLUMN store_id INT REFERENCES store(id);
 
+-- ALTER TABLE products
+-- DROP COLUMN store_id;
+
+-- SELECT * FROM products
+-- ORDER BY id;
+
 -- INSERT INTO store (name, city)
 -- VALUES ('Store A', 'City 1'),
 --        ('Store B', 'City 2'),
 --        ('Store C', 'City 3');
 
-SELECT * FROM store;
+-- SELECT * FROM store;
+
+-- DROP TABLE store;
 
 -- UPDATE products
 -- SET store_id = 2
